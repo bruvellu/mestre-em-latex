@@ -1,0 +1,99 @@
+%% Pacotes utilizados
+% Codificação e formatação básica do LaTeX
+\usepackage[english,brazilian]{babel}		% Suporte para português (hifenação e caracteres especiais)
+\usepackage[utf8]{inputenc}			% Codificação do arquivo
+\usepackage{cmap}				% Mapear caracteres especiais no PDF
+\usepackage[T1]{fontenc}			% Codificação da fonte
+\usepackage{amsmath,amssymb,amsfonts,textcomp}	% Essencial para colocar funções e outros símbolos matemáticos
+
+% Layout
+\usepackage[twoside]{geometry}			% Customização do layout da página, margens espelhadas
+\usepackage{setspace}				% Para definir espaçamento entre as linhas
+\setlength{\fboxsep}{1em}			% Espaçamento do texto para o frame
+%\geometry{hcentering}				% Faz com que as margens tenham o mesmo tamanho horizontalmente
+
+% Elementos Gráficos
+\usepackage[]{graphicx}				% Para incluir figuras (pacote extendido)
+\usepackage{color}				% Suporte a cores
+\usepackage{subfig}				% Criar figura dividida em subfiguras
+\graphicspath{{./figuras/}}			% Caminho para o diretório das figuras
+\usepackage{caption}				% Customizar as legendas de figuras e tabelas
+\captionsetup[subfigure]{style=default, margin=0pt, parskip=0pt, hangindent=0pt, indention=0pt, singlelinecheck=true, labelformat=parens, labelsep=space}
+\usepackage{multicol}				% Criar ambientes com 2 ou mais colunas
+%\usepackage{wallpaper}				% Colocar figuras de fundo (e.g., capa)
+%\addtolength{\wpYoffset}{-140pt}		% Ajuste da posição da figura no eixo Y
+%\addtolength{\wpXoffset}{36pt}			% Ajuste da posição da figura no eixo X
+
+% Tabelas
+\usepackage{array}				% Elementos extras para formatação de tabelas
+\usepackage{booktabs}				% Tabelas com qualidade de publicação
+\usepackage{longtable}				% Para criar tabelas maiores que uma página
+\usepackage{lscape}				% adicionar tabelas e figuras como landscape
+
+% Lista de Abreviações
+\usepackage[intoc,portuguese]{nomencl}		% Cria lista de abreviações
+\makenomenclature				% Comando para criar
+
+% Notas de rodapé
+\usepackage{footnote}				% Lidar com notas de rodapé em diversas situações
+\makesavenoteenv{tabular}			% Notas criadas nas tabelas ficam no fim das tabelas
+
+% Links dinâmicos
+\usepackage{hyperref}				% Suporte para hipertexto, links para referências e figuras
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, pagecolor=blue, urlcolor=green,
+            pdfauthor={Nome do Autor},
+            pdftitle={Título do Projeto},
+            pdfsubject={Assunto do Projeto},
+            pdfkeywords={palavra-chave, palavra-chave, palavra-chave},
+            pdfproducer={Latex},
+            pdfcreator={pdflatex}}		% Configurações dos links e metatags do PDF a ser gerado
+\usepackage{lastpage}				% Conta o número de páginas
+
+% Referências bibliográficas e afins
+\usepackage{natbib}				% Formatar as citações no texto e a lista de referências
+\usepackage[nottoc]{tocbibind} 			% Adicionar bibliografia, índice e conteúdo na Tabela de conteúdo
+
+% Pontuação e unidades
+\usepackage{icomma}				% Posicionar inteligentemente a vírgula como separador decimal
+\usepackage[tight]{units}			% Formatar as unidades com as distâncias corretas
+
+% Cabeçalho e rodapé
+\usepackage{fancyhdr}				% Controlar os cabeçalhos e rodapés
+\pagestyle{fancy}				% Usar os estilos do pacote fancyhdr
+\fancypagestyle{plain}{\fancyhf{}}
+\fancyhead{}					% Limpar os campos do cabeçalho atual
+\fancyhead[LO,RE]{\thepage}			% Número da página do lado esquerdo [L] nas páginas ímpares [O] e do lado direito [R] nas páginas pares [E]
+\fancyhead[RO]{\nouppercase{\rightmark}}	% Nome da seção do lado direito em páginas ímpares
+\fancyhead[LE]{\nouppercase{\leftmark}}		% Nome do capítulo do lado esquerdo em páginas pares
+\fancyfoot{} 					% Limpar os campos do rodapé
+\renewcommand{\headrulewidth}{0pt}		% Omitir linha de separação entre cabeçalho e conteúdo
+\renewcommand{\footrulewidth}{0pt}		% Omitir linha de separação entre rodapé e conteúdo
+\headheight 13.6pt				% Altura do cabeçalho
+
+% Inserir comentários no texto
+\usepackage[margins]{trackchanges}		% Marcar mudanças e fazer comentários
+\renewcommand{\initialsTwo}{bcv}		% Iniciais do autor
+\reversemarginpar				% Notas na margem interna
+
+
+%% Comandos customizados
+
+% Espécie estudada
+\newcommand{\subde}{\emph{Clypeaster~subdepressus}}	% Espécie
+\newcommand{\subdeshort}{\emph{C.~subdepressus}}	% Espécie abreviada
+
+% Título do projeto
+\newcommand{\tit}{Título original do projeto que normalmente é o que você definiu lá no começo e não pode mais mudar}
+\newcommand{\nomedoaluno}{Nome Completo do Aluno}
+
+
+%% Pacotes não implementados
+
+%\usepackage[fixlanguage]{babelbib}		% Escrever referências em outras línguas que não inglês
+%\usepackage{abntcite}				% Formatação de citações e referências segundo a ABNT
+%\usepackage{xindy}				% Índice remissivo
+
+%\usepackage{biocon}				% Para lidar com nomes de espécies [não implementado]
+%\newanimal{Cs}{genus=Clypeaster,epithet=subdepressus,author=Gray,year=1825}
+%\newcommand{\subde}{\animal[e]{Cs}}		% Comando para escrever a espécie por extenso [não implementado]
+%\newcommand{\subdeshort}{\animal[a]{Cs}}	% Comando para escrever a espécie abreviada [não implementado]

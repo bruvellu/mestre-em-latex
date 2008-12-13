@@ -1,0 +1,208 @@
+% Capa
+\begin{titlepage}
+% Os comandos abaixo acertam as distâncias para margens alternadas.
+% Este tipo de margem é usado para impressões frente e verso.
+\oddsidemargin 1.2cm
+\evensidemargin 0cm
+% Se quiser uma figura de fundo na capa use o pacote wallpaper e descomente a linha abaixo.
+% \ThisCenterWallPaper{0.8}{nomedafigura}
+\begin{center}
+{\LARGE \nomedoaluno}
+\par
+\vspace{200pt}
+{\Huge \tit}
+\par
+\vspace{280pt}
+\textbf{{\large São Paulo}\\
+{\large 2008}}
+\end{center}
+\end{titlepage}
+% Cria uma página em branco, útil na hora de imprimir frente e verso.
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% Comandos para margens novamente
+\oddsidemargin 1.2cm
+\evensidemargin 0cm
+
+% Números das páginas em algarismos romanos
+\pagenumbering{roman}
+
+\thispagestyle{empty}
+% Página de Rosto
+\begin{center}
+{\LARGE \nomedoaluno}
+\par
+\vspace{203pt}
+{\Huge \tit}
+\end{center}
+
+\par
+\vspace{90pt}
+\hspace*{16em}\parbox{7.6cm}{{\large Dissertação apresentada ao Instituto de Biociências da Universidade de São Paulo, para a obtenção de Título de Mestre em Ciências, na Área de XXXXXXXX.}}
+
+\par
+\vspace{1em}
+\hspace*{16em}\parbox{7.6cm}{{\large Orientador: Nome do Orientador}}
+
+\par
+\vspace{100pt}
+\begin{center}
+\textbf{{\large São Paulo}\\
+{\large 2008}}
+\end{center}
+
+\newpage
+
+% Ficha Catalográfica
+\thispagestyle{empty}
+
+\hspace{8em}\fbox{\begin{minipage}{10cm}
+Aluno, Nome C.
+
+\hspace{2em}\tit
+
+\hspace{2em}\pageref{LastPage} páginas
+
+\hspace{2em}Dissertação (Mestrado) - Instituto de Biociências da Universidade de São Paulo. Departamento de XXXXXXXX.
+
+\begin{enumerate}
+\item Palavra-chave
+\item Palavra-chave
+\item Palavra-chave
+\end{enumerate}
+I. Universidade de São Paulo. Instituto de Biociências. Departamento de XXXXXXXX.
+
+\end{minipage}}
+\par
+\vspace{2em}
+\begin{center}
+{\LARGE\textbf{Comissão Julgadora:}}
+
+\par
+\vspace{10em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l}
+\rule{16em}{1px} 	& \rule{16em}{1px} \\
+Prof. Dr. 			& Prof. Dr. \\
+Nome				& Nome
+\end{tabular*}
+
+\par
+\vspace{10em}
+
+\parbox{16em}{\rule{16em}{1px} \\
+Prof. Dr. \\
+Nome do Orientador}
+\end{center}
+
+\newpage
+
+% Dedicatória
+\thispagestyle{empty}
+
+% Posição do texto na página
+\vspace*{0.75\textheight}
+\begin{flushright}
+  \emph{Dedicatória...}
+\end{flushright}
+
+\newpage
+
+% Epígrafe
+\thispagestyle{empty}
+
+\vspace*{0.4\textheight}
+\noindent{\LARGE\textbf{Epígrafe}}
+% Tudo que você escreve no verbatim é renderizado literalmente (comandos não são interpretados e os espaços são respeitados)
+\begin{verbatim}
+O que é bonito?
+É o que persegue o infinito;
+Mas eu não sou
+Eu não sou, não…
+Eu gosto é do inacabado,
+O imperfeito, o estragado, o que dançou
+O que dançou…
+Eu quero mais erosão
+Menos granito.
+Namorar o zero e o não,
+Escrever tudo o que desprezo
+E desprezar tudo o que acredito.
+Eu não quero a gravação, não,
+Eu quero o grito.
+Que a gente vai, a gente vai
+E fica a obra,
+Mas eu persigo o que falta
+Não o que sobra.
+Eu quero tudo que dá e passa.
+Quero tudo que se despe,
+Se despede, e despedaça.
+O que é bonito…
+\end{verbatim}
+\begin{flushright}
+Lenine e Bráulio Tavares
+\end{flushright}
+
+\newpage
+
+% Agradecimentos
+\thispagestyle{empty}
+
+% Espaçamento duplo
+\doublespacing
+
+\noindent{\LARGE\textbf{Agradecimentos}}
+
+Agradeço ao meu orientador, ao meu co-orientador, aos meus colaboradores, aos técnicos, à seção administrativa, aos meus amigos, à minha família e ao meu grande amor.
+
+\thispagestyle{empty}
+\newpage
+
+\begin{abstract}
+\label{resumo}
+% Pode parecer estranho, mas colocar uma frase por linha ajuda a organizar e reescrever o texto quando necessário.
+% Além disso, ajuda se você estiver comparando versões diferentes do mesmo texto.
+% Para separar parágrafos utilize uma linha em branco.
+Esta, quem sabe, é a parte mais importante do seu trabalho.
+É o que a maioria das pessoas vai ler.
+Seja objetivo sem perder conteúdo.
+Um bom resumo explica porquê este trabalho é interessante, relata como foi feito, o que foi encontrado, contextualiza os resultados e delineia conclusões.
+
+Como a espécie \emph{Homo sapiens} passa em média \unit[4]{h} por dia na frente do computador, demora \unit[30]{min} para aprender \LaTeX\ e tem células com diâmetro aproximado de \unit[250]{µm}, você precisa deixar tudo bem formatado.
+\end{abstract}
+
+% Criei a página do abstract na mão, por isso tem bem mais comandos do que o resumo acima, apesar de serem idênticas.
+\vspace*{10pt}
+% Abstract
+\begin{center}
+  \emph{\begin{large}Abstract\end{large}}\label{abstract}
+\vspace{2pt}
+\end{center}
+
+% Selecionar a linguagem acerta os padrões de hifenação diferentes entre inglês e português.
+\selectlanguage{english}
+\noindent
+This is, who knows, the most important part of your work.
+This is what most people will read.
+Be concise without omitting content.
+A good abstract explains why this is an interesting study, tells how it was done, what was found, contextualizes the results and set conclusions.
+
+As \emph{Homo sapiens} spends about \unit[4]{h} per day in front of a computer, takes \unit[30]{min} to learn \LaTeX\ and has cells approximately \unit[250]{µm} wide, you need to format everything very well.
+
+% Voltando ao português...
+\selectlanguage{brazilian}
+
+\newpage
+
+% Números das páginas em arábicos
+\pagenumbering{arabic}
+
+% Índice
+\tableofcontents
+
+% Lista de figuras
+\listoffigures
+
+% Lista de tabelas
+\listoftables
+
+% Abreviações
+\printnomenclature
