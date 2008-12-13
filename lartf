@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Converte os arquivos .tex para latin1 para funcionar com o latex2rtf
+# To-Dos
+# 	- Comando com argumentos, para selecionar o arquivo tex master para compilar
+# 	- Colocar opção para abrir o rtf imediatamente após criação (default é o do sistema, colocar jeito de alterar)
+# 	- Avançado: colocar possibilidade de alterar o comando conversor
+
+# Verifica se a pasta "rtf" existe
+# Nela que serão copiados os arquivos .tex e criado o RTF
+
+folder=rtf
+backups=backups
+
+# Verificando se existe um diretório de backups
+
+if [ ! -d "$backups" ]
+then
+	echo "no backup folder!"
+	echo "creating a folder for backups..."
+	mkdir $backups
+fi
+
+# Criar o backup do diretório
+
+if [ -d "$folder" ]
+then
+	echo "backup folder exist!"
+	echo "moving backup files..."
+	tar -pczf backups/$folder"-old-"`date +%Y-%m-%d_%H%M`.tar.gz $folder/*
+else
+	echo "rtf folder does not exist!"
+	echo "creating a folder for the LATEX -> RTF conversion..."
+	mkdir $folder
+fi
+
+for i in *.tex; do
+cp $i $folder/$i;
+done
+
+for i in $folder/*.tex; do
+recode utf8..latin1 $i;
+done
+
+latex2rtf $folder/mestrado.tex && abiword $folder/mestrado.rtf
