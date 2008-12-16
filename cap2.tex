@@ -17,50 +17,63 @@ Você pode dividir cada seção em subseções para organizar melhor o conteúdo
 Você também pode criar subsubseções caso necessário.
 % Para inserir fórmulas matemáticas bonitinhas coloque $entre$.
 % Note como formatar a unidade de temperatura e como utilizar o comando \nicefrac para frações.
-A cultura foi mantida num ciclo de $12:12$ horas e temperatura constante de \unit[24]{°C} e a concentração final entre $8\times10^5$ e $1\times10^6$ \nicefrac{células}{mL}.
+A cultura foi mantida num ciclo de $12:12$ horas e temperatura constante de \unit[24]{°C}; a concentração final foi de $8\times10^5$ e $1\times10^6$ \nicefrac{células}{mL}.
 
 \subsubsection{Metamorfose}
 
 % Como o % representa um comentário e não é compilado, para fazê-lo aparecer no texto você precisa colocar uma "\" antes, como abaixo.
-Mais uma subsubseção só pelo prazer de escrever subsubseção \citep{Highsmith1982}. Apenas \unit[4]{\%} do texto está contido em subsubseções.
+Apenas \unit[4]{\%} do texto está contido em subsubseções.
 
 \subsection{Microscopia de luz}\label{cap2:mem:micro}
 
-As amostras também foram colocadas em placas $35\times\unit[10]{mm}$ para visualização na lupa.
-Alguns videogramas foram capturados diretamente da câmera de vídeo conectada ao computador via porta \emph{Firewire}.
+As amostras também foram colocadas em placas $35\times\unit[10]{mm}$ para visualização na lupa ou através de câmera de vídeo conectada via porta \emph{Firewire}.
 
 \section{Resultados}\label{cap2:res}
 
 \subsection{Primeiras figuras}\label{cap2:res:figs}
 
-Subseções de novo, mas agora é hora de colocar algumas figuras para mostrar resultados. Podemos começar com uma bela migração de pró-núcleos de \subde\ (Figura~\ref{fig:pronuc}).
+Subseções de novo, mas é hora de colocar algumas figuras para mostrar resultados (Figura~\ref{fig:pronuc}).
 
+% Veja a documentação para mais detalhes de como inserir figuras
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=418pt]{pronuc}
-  \caption[Migração dos pró-núcleos]{Montagem mostrando a migração e fusão dos pró-núcleos feminino (verde) e masculino (vermelho) durante \unit[12]{min}~\unit[30]{s}.}
+  \includegraphics[width=\textwidth]{pronuc}
+  \caption[Figura simples]{Figura abstrata simples com largura igual à largura do texto.}
   \label{fig:pronuc}
 \end{figure}
 
-Essa pode ser a multifig (Figura~\ref{fig:tufo}).
-
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=300pt]{tufo}
-  \caption[Prisma sob MEV]{Larva de \subdeshort\ no estágio de prisma. Na porção anterior encontra-se o tufo apical (\textbf{ta}) e a depressão onde será formada a boca (\textbf{bo}). Na região posterior crescem os braços pós-orais (\textbf{po}) e o futuro ânus (\textbf{an}).}
-  \nomenclature{bo}{boca}%
-  \nomenclature{ta}{tufo apical}%
-  \nomenclature{po}{braços pós-orais}%
-  \nomenclature{an}{ânus}
-  \label{fig:tufo}
+  \includegraphics[width=\textwidth/2]{pronuc}
+  \caption[Outra figura simples]{Figura abstrata simples com largura igual à metade da largura do texto.}
+  \label{fig:pronuc2}
 \end{figure}
+
+Você também pode inserir múltiplas figuras em uma só, permitindo alinhá-las de forma flexível e consistente (Figura~\ref{fig:tufo}).
+
+\begin{figure}[htbp]%
+  \centering%
+  \subfloat[Oogônias]{\label{fig:t1}\includegraphics[width=200pt]{tufo}}\vspace{11pt}
+  \subfloat[Oócitos primários pré-vitelogênicos]{\label{fig:t2}\includegraphics[width=200pt]{tufo}}\\
+  \vspace{-18pt}
+  \subfloat[Oócito primário vitelogênico inicial]{\label{fig:t3}\includegraphics[width=200pt]{tufo}}\vspace{11pt}
+  \subfloat[Oócito primário vitelogênico tardio]{\label{fig:t4}\includegraphics[width=200pt]{tufo}}%
+  \caption[Figura com subfloats]{Exemplo de figura com subfloats. \subref{fig:t1}~Oogônias (\textbf{og}) na lâmina. \subref{fig:t2}~Oócitos primários pré-vitelogênicos (\textbf{oppv}) envolvidos. \subref{fig:t3}~Oócito primário vitelogênico inicial (\textbf{opv}) aderido. \subref{fig:t4}~Oócitos primários vitelogênicos dentro da câmara. \textbf{sg}, seio genital; \textbf{ln}, lúmen.}%
+  \nomenclature{og}{oogônia}%
+  \nomenclature{oppv}{oócitos primários pré-vitelogênicos}%
+  \nomenclature{opv}{oócitos primários vitelogênicos}%
+  \nomenclature{sg}{seio genital}%
+  \nomenclature{ln}{lúmen}
+  \label{fig:tufo}%
+\end{figure}%
 
 \subsection{Tabelas}\label{cap2:res:tabs}
 
-Os dados do desenvolvimento de \subdeshort\ da fecundação até a eclosão estão resumidos na Tabela~\ref{tab:exemplo}.
+O desenvolvimento está resumido na Tabela~\ref{tab:exemplo}.
 
+% Para criar tabelas
 \begin{table}[htbp]
-  \caption[Tabela com \texttt{booktable}]{Exemplo de legenda de tabela criada com o pacote \texttt{booktable}.}
+  \caption[Tabela com \texttt{booktabs}]{Exemplo de legenda de tabela criada com o pacote \texttt{booktabs}.}
   \label{tab:exemplo}
   \vspace{1em}
   \centering
@@ -77,28 +90,21 @@ Os dados do desenvolvimento de \subdeshort\ da fecundação até a eclosão est�
 \end{table}
 
 % Usando o pacote units
-As duas primeiras são meridionais, isto é, ocorrem ao longo do eixo \nicefrac{animal}{vegetal} (\nicefrac{A}{V}) e dividem o embrião em quatro blastômeros de tamanhos iguais à uma velocidade de \unitfrac[500]{µm}{s}.
-A blástula, composta por uma camada de células (ectoderme), passa por processos cruciais de seu desenvolvimento por volta de \unit[7,5]{h} após a fertilização.
-
+Ocorrem no eixo \nicefrac{animal}{vegetal} (\nicefrac{A}{V}) e dividem à \unitfrac[500]{µm}{s}.
+Desenvolvimento ocorre por volta de \unit[7,5]{h} após a fertilização.
 % Usando o pacote nomencl
-Cerca de \unit[10]{h} após a fertilização, as células mesenquimais primárias (CMP) iniciam sua ingressão na blastocele a partir do pólo vegetativo.%
+Após \unit[10]{h}, as células mesenquimais primárias (CMP) iniciam sua ingressão.%
 \nomenclature{CMP}{células mesenquimais primárias}
-Nesse momento, é possível flagrar as primeiras células mesenquimais secundárias (CMS) na blastocele.%
+Flagramos as células mesenquimais secundárias (CMS) na blastocele.%
 \nomenclature{CMS}{células mesenquimais secundárias}
-
 % Colocando aspas e exemplo do pacote natbib
-Larvas com rudimento bem desenvolvido apresentam um comportamento de ''teste de substrato`` tocando o substrato com os braços larvais.
-Quatro pedicelárias oficéfalas \citep[][pg.~430]{Hyman1955} surgem na região posterior na altura do âmbito, sendo duas posicionados mais lateralmente.
+Larvas apresentam comportamento de ``teste de substrato'' com braços larvais \citep[][pg.~430]{Hyman1955}.
 
 \section{Discussão}\label{cap2:disc}
 
-\citet{Chia1977} verificou que as papilas genitais de \emph{Arachnoides placenta} não têm tecido muscular ou nervoso, sugerindo que a pressão hidrostática dos gametas seja responsável pela elevação das mesmas, como parece ocorrer em \subdeshort.
-Ainda não está claro se a formação de agregados é um comportamento reprodutivo de equinodermos ou se está relacionada à proteção e forrageamento dos indivíduos de uma população \citep{Pearse1991}.
-
-A velocidade de migração dos pró-núcleos de \subdeshort\ (\unitfrac[0,1]{µm}{s}) foi praticamente a mesma encontrada em \emph{C.~japonicus} (\unitfrac[0,082]{µm}{s}) e \emph{L.~variegatus} (\unitfrac[0,083]{µm}{s}).
-Contudo, não existe qualquer evidência direta de tal relação e não encontramos descrições semelhantes na literatura revisada \citep{Hamaguchi1980,Schatten1981,Pearse1991,Gilbert1997}.
-\emph{Mellita quinquiesperforata} desenvolve-se mais rapidamente; eclode \unit[4]{hpf}, completa a gastrulação \unit[7]{hpf} e inicia sua alimentação em \unit[24]{h} \citep{Caldwell1972}\footnote{A temperatura utilizada neste trabalho não foi precisada; os embriões foram fecundados e desenvolveram-se entre 25 e \unit[28]{°C}.}.
-
+\citet{Chia1977} verificou papilas em \subdeshort.
+A migração (\unitfrac[0,1]{µm}{s}) foi como \emph{C.~japonicus} (\unitfrac[0,082]{µm}{s}).
+\emph{Mellita~quinquiesperforata} desenvolve-se \citep{Caldwell1972}\footnote{A temperatura não foi precisada; embriões fecundados entre 25 e \unit[28]{°C}.}.
 A evolução deste caráter pode ser vista de duas formas.
 
 \begin{enumerate}
@@ -113,9 +119,7 @@ A evolução deste caráter pode ser vista de duas formas.
     \end{itemize}
 \end{enumerate}
 
-Segundo \citet{Mooi1990}, não existem critérios baseados em grupos externos que permitam polarizar o estado do caráter de múltiplos esferídios, para dois esferídios, e para um esferídio [\ref{hipo:2}], apesar de fazer sentido biologicamente.
-Uma alternativa seria considerar o esferídio único (Laganina e Scutellina) como plesiomórfico para Clypeasteroida [\ref{hipo:1}], tendo como grupo externo o fóssil \emph{Togocyamus}, que apresenta um único esferídio aberto \citep{Mooi1990}.
+Segundo \citet{Mooi1990}, não existem critérios para um esferídio [\ref{hipo:2}], e uma alternativa seria o único [\ref{hipo:1}], tendo o fóssil \emph{Togocyamus}.
+Jovens cresceram de \unit[0,35]{mm} para \unit[3,80]{mm} no primeiro mês.
 
-Jovens pós-metamórficos de \emph{M.~quinquiesperforata} cresceram de \unit[0,35]{mm} para \unit[3,80]{mm} do primeiro ao segundo mês, chegando a \unit[6,20]{mm} no sexto mês de vida após a metamorfose \citep{Caldwell1972}.
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
