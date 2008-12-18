@@ -35,6 +35,7 @@ As amostras também foram colocadas em placas $35\times\unit[10]{mm}$ para visua
 Subseções de novo, mas é hora de colocar algumas figuras para mostrar resultados (Figura~\ref{fig:pronuc}).
 
 % Veja a documentação para mais detalhes de como inserir figuras
+% O texto entre [] na legenda será utilizado na lista de figuras (no preâmbulo), sendo ideal para substituir legendas maiores
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{pronuc}
@@ -51,21 +52,23 @@ Subseções de novo, mas é hora de colocar algumas figuras para mostrar resulta
 
 Você também pode inserir múltiplas figuras em uma só, permitindo alinhá-las de forma flexível e consistente (Figura~\ref{fig:tufo}).
 
-\begin{figure}[htbp]%
-  \centering%
-  \subfloat[Oogônias]{\label{fig:t1}\includegraphics[width=200pt]{tufo}}\vspace{11pt}
-  \subfloat[Oócitos primários pré-vitelogênicos]{\label{fig:t2}\includegraphics[width=200pt]{tufo}}\\
+% Note como incluir as sublegendas para cada subfigura (subfloat) e como citá-las na legenda usando o comando subref.
+% Note também como incluir as referências às abreviações (nomenclature) utilizadas para que sejam listadas no preâmbulo.
+\begin{figure}[htbp]
+  \centering
+  \subfloat[Subfigura1]{\label{fig:t1}\includegraphics[width=200pt]{tufo}}\vspace{11pt}
+  \subfloat[Subfigura2]{\label{fig:t2}\includegraphics[width=200pt]{tufo}}\\
   \vspace{-18pt}
-  \subfloat[Oócito primário vitelogênico inicial]{\label{fig:t3}\includegraphics[width=200pt]{tufo}}\vspace{11pt}
-  \subfloat[Oócito primário vitelogênico tardio]{\label{fig:t4}\includegraphics[width=200pt]{tufo}}%
-  \caption[Figura com subfloats]{Exemplo de figura com subfloats. \subref{fig:t1}~Oogônias (\textbf{og}) na lâmina. \subref{fig:t2}~Oócitos primários pré-vitelogênicos (\textbf{oppv}) envolvidos. \subref{fig:t3}~Oócito primário vitelogênico inicial (\textbf{opv}) aderido. \subref{fig:t4}~Oócitos primários vitelogênicos dentro da câmara. \textbf{sg}, seio genital; \textbf{ln}, lúmen.}%
+  \subfloat[Subfigura3]{\label{fig:t3}\includegraphics[width=200pt]{tufo}}\vspace{11pt}
+  \subfloat[Subfigura4]{\label{fig:t4}\includegraphics[width=200pt]{tufo}}%
+  \caption[Figura com subfiguras]{Exemplo de figura com subfiguras. \subref{fig:t1}~Subfigura1 (\textbf{og}) na lâmina. \subref{fig:t2}~Subfigura2 (\textbf{oppv}). \subref{fig:t3}~Subfigura3 aderida (\textbf{opv}). \subref{fig:t4}~Subfigura4. \textbf{sg}, seio genital; \textbf{ln}, lúmen.}%
   \nomenclature{og}{oogônia}%
   \nomenclature{oppv}{oócitos primários pré-vitelogênicos}%
   \nomenclature{opv}{oócitos primários vitelogênicos}%
   \nomenclature{sg}{seio genital}%
   \nomenclature{ln}{lúmen}
-  \label{fig:tufo}%
-\end{figure}%
+  \label{fig:tufo}
+\end{figure}
 
 \subsection{Tabelas}\label{cap2:res:tabs}
 
@@ -91,35 +94,36 @@ O desenvolvimento está resumido na Tabela~\ref{tab:exemplo}.
 
 % Usando o pacote units
 Ocorrem no eixo \nicefrac{animal}{vegetal} (\nicefrac{A}{V}) e dividem à \unitfrac[500]{µm}{s}.
-Desenvolvimento ocorre por volta de \unit[7,5]{h} após a fertilização.
+Por volta de \unit[7,5]{h} após a elevação.
 % Usando o pacote nomencl
 Após \unit[10]{h}, as células mesenquimais primárias (CMP) iniciam sua ingressão.%
 \nomenclature{CMP}{células mesenquimais primárias}
-Flagramos as células mesenquimais secundárias (CMS) na blastocele.%
-\nomenclature{CMS}{células mesenquimais secundárias}
 % Colocando aspas e exemplo do pacote natbib
-Larvas apresentam comportamento de ``teste de substrato'' com braços larvais \citep[][pg.~430]{Hyman1955}.
+Larvas apresentam comportamento de ``teste de substrato''.
 
 \section{Discussão}\label{cap2:disc}
 
-\citet{Chia1977} verificou papilas em \subdeshort.
-A migração (\unitfrac[0,1]{µm}{s}) foi como \emph{C.~japonicus} (\unitfrac[0,082]{µm}{s}).
-\emph{Mellita~quinquiesperforata} desenvolve-se \citep{Caldwell1972}\footnote{A temperatura não foi precisada; embriões fecundados entre 25 e \unit[28]{°C}.}.
+% Comandos como o utilizado para incluir o nome da espécie estudada (subdeshort) devem ser seguidos de uma \ para inserir um espaço antes da próxima palavra. Esta \ não precisa ser utilizada quando o comando é seguido de ponto ou vírgula.
+\citet{Day2006} não usaram papilas de \subdeshort.
+% O pacote icomma permite usar a vírgula como separador decimal, já que o comportamento padrão do LaTeX é inserir um espaço maior após uma vírgula.
+A migração foi similar à \subde\ (\unitfrac[0,082]{µm}{s}).
+Outro comando útil é a criação de notas de rodapé\footnote{A temperatura não foi precisada; embriões fecundados entre 25 e \unit[28]{°C}.}.
 A evolução deste caráter pode ser vista de duas formas.
 
+% Este é um dos modos de iniciar uma lista ordenada.
+% Note que é possível inserir listas dentro de listas.
 \begin{enumerate}
-  \item{Múltiplos esferídios $\longrightarrow$ Um esferídio}\label{hipo:1}
+  \item{Condição inicial $\longrightarrow$ Condição final}\label{hipo:1}
     \begin{itemize}
-      \item{Um esferídio seria plesiomórfico para Clypeasteroida}
-      \item{Dois esferídios seria uma autapomorfia de Clypeasterina}
+      \item{Primeira conseqüência}
+      \item{Segunda conseqüência}
     \end{itemize}
-  \item{Múltiplos esferídios $\longrightarrow$ Dois esferídios $\longrightarrow$ Um esferídio}\label{hipo:2}
+  \item{Outra condição inicial $\longrightarrow$ Condição intermediária $\longrightarrow$ Outra condição final}\label{hipo:2}
     \begin{itemize}
-      \item{Dois esferídios seria plesiomórfico para Clypeasteroida}
+      \item{Conseqüência alternativa}
     \end{itemize}
 \end{enumerate}
 
-Segundo \citet{Mooi1990}, não existem critérios para um esferídio [\ref{hipo:2}], e uma alternativa seria o único [\ref{hipo:1}], tendo o fóssil \emph{Togocyamus}.
-Jovens cresceram de \unit[0,35]{mm} para \unit[3,80]{mm} no primeiro mês.
+Você pode citar ítens assinalados, como a hipótese \ref{hipo:1} e a alternativa \ref{hipo:2}.
 
 %\clearpage{\pagestyle{empty}\cleardoublepage}
