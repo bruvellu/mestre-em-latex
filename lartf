@@ -1,10 +1,14 @@
 #!/bin/bash
 
-# Converte os arquivos .tex para latin1 para funcionar com o latex2rtf
-# To-Dos
-# 	- Comando com argumentos, para selecionar o arquivo tex master para compilar
-# 	- Colocar opção para abrir o rtf imediatamente após criação (default é o do sistema, colocar jeito de alterar)
-# 	- Avançado: colocar possibilidade de alterar o comando conversor
+### lartf - converte arquivos em LaTeX para rtf
+#
+### Copyleft 2009 - Bruno C. Vellutini | http://organelas.com
+#
+### Pré-requisitos:
+#	Pacotes latex2rtf e recode instalados
+#
+### Função:
+#	Converter arquivos .tex para latin1 e usar o latex2rtf para convertê-los para rtf
 
 # Verifica se a pasta "rtf" existe
 # Nela que serão copiados os arquivos .tex e criado o RTF
@@ -42,4 +46,16 @@ for i in $folder/*.tex; do
 recode utf8..latin1 $i;
 done
 
-latex2rtf $folder/mestrado.tex && abiword $folder/mestrado.rtf
+latex2rtf $folder/mestrado.tex
+
+# Descomente a linha abaixo s quiser que o arquivo seja aberto automaticamente pelo openoffice
+# ooffice $folder/mestrado.rtf
+
+########################################
+
+# To-Dos
+# 	- Comando com argumentos, para selecionar o arquivo tex master para compilar
+# 	- Colocar opção para abrir o rtf imediatamente após criação (default é o do sistema, colocar jeito de alterar)
+# 	- Avançado: colocar possibilidade de alterar o comando conversor
+
+
