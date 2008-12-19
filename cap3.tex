@@ -2,141 +2,85 @@
 
 \section{Introdução}\label{cap3:intro}
 
-De modo geral, populações de equinóides de águas rasas apresentam ciclo reprodutivo anual com períodos discretos de gametogênese e liberação de gametas \citep{Pearse1991}.
-\citet{Lessios1987} observou que o diâmetro dos óvulos de \subdeshort\ do Caribe é menor depois de setembro, mas este padrão não se repetiu no ano seguinte, havendo diferença entre as médias de outubro de 1982 e 1985.
+Mais uma introdução.
 
 \section{Materiais e Métodos}\label{cap3:mem}
 
 \subsection{Coleta dos adultos}\label{cap3:mem:coleta}
 
-Medimos a altura do eixo \nicefrac{oral}{aboral}, a espessura da borda no ambúlacro III e o peso úmido dos exemplares (precisão de \unit[0,1]{g}).
+Outro exemplo de como usar frações no eixo \nicefrac{oral}{aboral}.
 
 \subsection{Dissecção}\label{cap3:mem:diss}
 
-Os lotes mensais foram mantidos em baldes de \unit[30]{L} até o processo de dissecção.
-
-Calculamos o índice gonadal através da equação \citep[adaptado de][]{MacCord2004}, baseado no peso úmido de apenas uma gônada de cada indivíduo:
+Um dos pontos fortes do \LaTeX\ é a praticidade e beleza das fórmulas matemáticas:
 \begin{equation}\label{eq:ind}\notag
 IG=\frac{\text{peso úmido da gônada}}{\text{peso úmido do exemplar - (peso úmido da gônada)}}
 \end{equation}
 
-Por meio do programa de processamento de imagens \emph{ImageJ} \citep{Rasband1997} calculamos a área, diâmetro, perímetro dos túbulos e área ocupada pelo epitélio germinativo (fagócitos nutritivos e células germinativas).
-Os testes foram considerados estatisticamente significativos quando $P<0,050$.
-Utilizamos a linguagem \emph{R} \citep{R2005} para o manejo dos dados morfométricos e execução de análises estatísticas.
-Em todo o trabalho, os nomes dos testes estão assinalados em fonte \texttt{monoespaçada} e os nomes dos estágios gonadais estão assinalados em \textbf{negrito}.
-Os dados estão expressos na forma $\text{média} \pm \text{desvio padrão}$.
+Usamos o programa de processamento de imagens \emph{ImageJ} \citep{Rasband1997} e a linguagem \emph{R} \citep{R2005} para a morfometria ($P<0,050$).
+Os testes estão em fonte \texttt{monoespaçada}, os estágios em \textbf{negrito} e os dados na forma $\text{média} \pm \text{desvio padrão}$.
 
 \section{Resultados}\label{cap3:res}
 
-\subsection{Anatomia}\label{cap3:res:anato}
-
-A média do peso de uma gônada de \subdeshort\ foi de $2,7\pm\unit[1,1]{g}$ ($n=119$), com amostras entre \unit[0,6]{g} e \unit[7,7]{g}, coletados nos estágios de \textbf{recuperação} e \textbf{prematuro}, apesar das variâncias serem significativamente diferentes ($P=0,007$), os estágios apresentaram distribuição normal.
-
 \subsection{Histologia}\label{cap3:res:histo}
 
-Os túbulos que constituem o tecido gonadal estão imersos no líquido do celoma perivisceral.
-A caracterização dos estágios gonadais foi baseada em estudos anteriores realizados com equinodermos \citep[e.g.,][]{Lane1979,Byrne1990,Pearse1991,MacCord2004,Walker2005,Tavares2006}.
+% A inserção de fórmulas no meio do texto requer o uso de $fórmula$
+A média foi de $2,7\pm\unit[1,1]{g}$ ($n=119$), com amostras entre \unit[0,6]{g} e \unit[7,7]{g} e $P=0,007$.
 
 \subsubsection{Fêmeas}\label{cap3:res:femeas}
 
-Identificamos 6 estágios de maturação gonadal nas fêmeas de \subdeshort.
-
+% Outro ambiente útil é o descritpion, como exemplificado abaixo.
 \begin{description}
-  \item[Recuperação $(n=7)$:] Epitélio germinativo com vilosidades, ocupando $80,4\pm\unit[9,4]{\%}$ da área gonadal.
-    Grânulos dos fagócitos nutritivos relativamente densos e presentes na maior parte do citoplasma, com poucos glóbulos hialinos e vacúolos.
-    Pequenos oócitos pré-vitelogênicos presentes na lâmina basal; lúmen não contém óvulos.
-    O diâmetro médio do túbulo em corte transversal é de $0,68\pm\unit[0,21]{mm}$.
-  \item[Proliferação $(n=1)$:] Fagócitos nutritivos contêm grande quantidade de grânulos densos, poucos glóbulos hialinos e vacúolos.
-    Muitos oócitos pré-vitelogênicos e vitelogênicos crescendo entre os fagócitos nutritivos; lâmina basal com muitas vilosidades.
-    O único túbulo em corte transversal tinha diâmetro reduzido (\unit[0,36]{mm}).
-    A ocupação do epitélio germinativo no restante da gônada é semelhante aos estágios de \textbf{recuperação} e \textbf{prematuro}.
-    Não há óvulos no lúmen.
+  \item[Estágio1 $(n=27)$:] Descrição minuciosa deste estágio.
+    Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+    Uma boa formatação não distrai o leitor e proporciona maior clareza e prazer durante a leitura.
+  \item[Estágio2 $(n=25)$:] Descrição minuciosa deste estágio.
+    Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+    Uma boa formatação não distrai o leitor e proporciona maior clareza e prazer durante a leitura.
 \end{description}
 
-\paragraph{Oogênese}
-
-O estágio com maior quantidade de grânulos PAS+ no citoplasma dos fagócitos nutritivos foi o de \textbf{proliferação}.
+As descrições também podem ser colocadas uma dentro da outra.
 
 \begin{description}
-  \item[Oogônias:] Citoplasma acidófilo, sem grânulos ou vacúolos e com aparência lisa.
-  Diâmetro celular varia entre 4 e \unit[11]{µm}.
-  Núcleo apresenta grumos de cromatina e nucléolo irregular.
-  A razão $\frac{\text{núcleo}}{\text{citoplasma}}\times100=51,0\pm\unit[11,9]{\%}$.
-  Membrana do núcleo bem definida e espessa.
-  Célula aderida à lâmina basal comumente agregada à outras oogônias (Figura~\ref{fig:oogenese}a).
-  \item[Oócitos primários] ~
+  \item[Tipo1:] Descrição minuciosa deste tipo.
+    Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+    A razão $\frac{\text{núcleo}}{\text{citoplasma}}\times100=51,0\pm\unit[11,9]{\%}$.
+  \item[Tipo2] ~
     \begin{description}
-      \item[Pré-Vitelogênico:] Diâmetro celular de 25 a \unit[75]{µm}.
-	A razão $\frac{\text{núcleo}}{\text{citoplasma}}$ torna-se menor ($22,7\pm\unit[5,4]{\%}$), devido ao aumento da área citoplasmática em relação ao núcleo.
-	Núcleo de aparência irregular e membrana mais fina.
-	Nucléolo torna-se redondo e bastante denso.
-	Citoplasma continua liso, sem grânulos ou vacúolos, até certo tamanho.
-	Oócitos maiores apresentam pequenas inclusões PAS+ e pequenos vacúolos.
-	Membrana sem microvilosidades.
-	Lâmina basal coberta por fagócitos nutritivos formando uma câmara de incubação individual; oócitos aderidos à lâmina basal (Figura~\ref{fig:oogenese}b).
-      \item[Vitelogênico:] Núcleo com pouca heterocromatina e com membrana fina.
-	Nucléolo continua redondo e denso.
-	Razão $\frac{\text{núcleo}}{\text{citoplasma}}$ $14,0\pm\unit[1,5]{\%}$; diâmetro das células variando de 94 a \unit[129]{µm}.
-	Citoplasma rugoso com inúmeras inclusões densas e vacúolos.
-	Grânulos PAS+ em todo o citoplasma.
-	Membrana plasmática com microvilosidades.
-	Câmara de incubação bastante evidente e oócitos aderidos à lâmina basal (Figura~\ref{fig:oogenese}c,d).
+      \item[Subtipo2.1:] Descrição minuciosa deste tipo.
+	Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+      \item[Subtipo2.2:] Descrição minuciosa deste tipo.
+	Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.Núcleo com pouca heterocromatina e com membrana fina.
     \end{description}
-  \item[Óvulos:] Núcleo raramente visível, com cromatina descondensada e sem nucléolo.
-    Quebra da vesícula germinativa (núcleo) parece ocorrer com o oócito ainda aderido à lâmina basal.
-    Grânulos PAS+ densamente distribuídos pelo citoplasma exceto na periferia, onde encontram-se os grânulos corticais.
-    A migração dos grânulos corticais à periferia da célula parece ocorrer após a quebra da vesícula germinativa.
-    Citoplasma bastante vacuolado e rugoso e membrana plasmática sem vilosidades.
-    O diâmetro dos óvulos é de 151 $\pm$ \unit[8]{µm}.
+  \item[Tipo3:] Descrição minuciosa deste tipo.
+	Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
 \end{description}
 
-\begin{figure}[htbp]%
-  \centering%
-  \subfloat[Oogônias]{\label{fig:eo01}\includegraphics[width=200pt]{eo01}}\vspace{11pt}
-  \subfloat[Oócitos primários pré-vitelogênicos]{\label{fig:eo02}\includegraphics[width=200pt]{eo02}}\\
-  \vspace{-18pt}
-  \subfloat[Oócito primário vitelogênico inicial]{\label{fig:eo03}\includegraphics[width=200pt]{eo03}}\vspace{11pt}
-  \subfloat[Oócito primário vitelogênico tardio]{\label{fig:eo04}\includegraphics[width=200pt]{eo04}}%
-  \caption[Oogênese]{Etapas da oogênese em \subdeshort. \subref{fig:eo01}~Oogônias (\textbf{og}) agregadas na lâmina basal. \subref{fig:eo02}~Oócitos primários pré-vitelogênicos (\textbf{oppv}) envolvidos pelos fagócitos nutritivos (\textbf{fn}). \subref{fig:eo03}~Oócito primário vitelogênico inicial (\textbf{opv}) aderido à lâmina basal (\textbf{lb}) de uma vilosidade; citoplasma com algumas inclusões. \subref{fig:eo04}~Oócitos primários vitelogênicos no final da maturação dentro da câmara incubadora (\textbf{ci}) formada pelos fagócitos nutritivos; citoplasma repleto de vitelo. \textbf{sg}, seio genital; \textbf{ln}, lúmen; \textbf{em}, epitélio muscular.}%
-  \nomenclature{og}{oogônia}%
-  \nomenclature{lb}{lâmina basal}%
-  \nomenclature{ci}{câmara incubadora}
-  \label{fig:oogenese}%
-\end{figure}%
+\subsubsection{Outra tabela}\label{cap3:res:morf}
 
-\subsubsection{Morfometria}\label{cap3:res:morf}
-
-Como os conjuntos de valores apresentam distribuição normal e variâncias homogêneas utilizamos o teste \texttt{t} para compará-los (Tabela~\ref{tab:areap}.
+Outra tabela de exemplo onde utilizamos o teste \texttt{t} (Tabela~\ref{tab:areap}).
 
 \begin{table}[htbp]
-  \caption[Valores de $P$ entre médias da área ocupada pelo epitélio germinativo]{Valores de $P$ obtidos na comparação da porcentagem da área do túbulo ocupada pelo epitélio germinativo, através do teste \texttt{t} entre os diferentes estágios gonadais. Valores em negrito foram considerados significativos, $\alpha=0,05$.}
+  \caption[Tabelas com valores de $P$]{Um exemplo de tabela comum em trabalhos científicos mostrando valores de $P$ em uma comparação estatística, $\alpha=0,05$.}
   \label{tab:areap}
   \vspace{1em}
   \centering
   \begin{tabular}{l r r r r r}
     \toprule
-     ~			&	Recuperação	&	Proliferação	&	Prematuro	&	Maduro\\
+     ~		&	Estágio1	&	Estágio2	&	Estágio3	&	Estágio4\\
      \midrule
-     Proliferação	&	1,000		&	-		&	-		&	-\\
-     Prematuro		&	0,883		&	1,000		&	-		&	-\\
-     Maduro		&	\textbf{<0,001}	&	\textbf{<0,001}	&	\textbf{<0,001}	&	-\\
+     Estágio2	&	1,000		&	-		&	-		&	-\\
+     Estágio3	&	0,883		&	1,000		&	-		&	-\\
+     Estágio4	&	\textbf{<0,001}	&	\textbf{<0,001}	&	\textbf{<0,001}	&	-\\
      \bottomrule
    \end{tabular}
  \end{table}
 
 No caso, o modelo de regressão linear é descrito pela equação $y=0,799x+0,699$.
-Com o intuito de retirar o efeito do tamanho dos túbulos na análise da relação entre área total e área do epitélio germinativo, os resíduos da regressão entre as duas variáveis foram utilizados.
-
-\subsection{Ciclo Reprodutivo}\label{cap3:res:ciclo}
-
-Nos meses de dezembro de 2006, janeiro e fevereiro de 2007 predominaram os estágios \textbf{prematuro} e \textbf{maduro}, os quais apareceram em freqüência menor a partir de fevereiro.
-De março a maio predominou o estágio de \textbf{pós-liberação}, quando então as primeiras ocorrências do estágio de \textbf{recuperação} foram registradas.
 
 \section{Discussão}\label{cap3:disc}
 
-A substância negra viscosa encontrada envolvendo as gônadas recém dissecadas de \subde\ é possivelmente composta por agregados de celomócitos com grânulos negros.
-A organização dos epitélios e espaços observada nas gônadas de \subdeshort\ foi a mesma generalizada por~\citet[pg.~529]{Pearse1991}, sendo composta de 3 epitélios, uma camada colágena e 3 espaços distintos.
-Este padrão não é incomum, havendo diversos equinodermos em que a correlação positiva entre o tamanho corpóreo e peso gonadal, presente durante a fase juvenil, não se mantém nos indivíduos adultos \citep[e.g.,][]{Lane1979,Pearse1991,Tavares2006}.
+Uma discussão discutindo os resultados.
 
 %\section{Conclusões}\label{ciclo:conc}
 %Lista de conclusões
