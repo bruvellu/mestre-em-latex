@@ -1,4 +1,5 @@
-% Copyright and left (c)2008 Bruno C. Vellutini - http://organelas.com/
+% Mestre em LaTeX
+% Copyleft 2008-2010 Bruno C. Vellutini - http://organelas.com/
 %
 % Permission is hereby granted, free of charge, to any person obtaining a copy
 % of this software and associated documentation files (the "Software"), to deal
@@ -19,21 +20,28 @@
 % 
 % Para mais informações visite http://code.google.com/p/mestre-em-latex/
 
-\documentclass[twoside,a4paper,11pt]{report}	% Classe do documento
+% Classe do documento
+\documentclass[twoside,a4paper,11pt]{report}
 
-\include{meta}					% Pacotes e comandos customizados
+% Pacotes e comandos customizados
+\include{meta}
 
-\begin{document}				% Início do texto
+% Início do texto
+\begin{document}
 
-\include{pre}					% Capa, prefácio e afins
-\include{cap1}					% Capítulo 1: Introdução
-\include{cap2}					% Capítulo 2: ...
-\include{cap3}					% Capítulo 3: ...
-\include{final}					% Capítulo 4: Considerações Finais
+\include{pre}   % Capa, prefácio e afins
+\include{cap1}	% Capítulo 1: Introdução
+\include{cap2}	% Capítulo 2: ...
+\include{cap3}	% Capítulo 3: ...
+\include{final}	% Capítulo 4: Considerações Finais
 
-\bibliographystyle{apalike}			% Formato da bibliografia
-\bibliography{mestre}				% Arquivo .bib
+% Formato da bibliografia
+\bibliographystyle{apalike}
+% Arquivo .bib
+\bibliography{mestre}
 
-\include{apend}					% Apêndice(s)
+% Apêndice(s)
+\include{apend}
 
-\end{document}					% Fim do texto
+% Fim do texto
+\end{document}
