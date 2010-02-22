@@ -40,8 +40,9 @@
 \usepackage{subfig}
 \captionsetup[subfigure]{style=default, margin=0pt, parskip=0pt, hangindent=0pt, indention=0pt, singlelinecheck=true, labelformat=parens, labelsep=space}
 
-% Caminho para o diretório das figuras
-\graphicspath{{./figuras/}}
+% Caso queira guardar as figuras em uma pasta separada
+% (descomente e) defina o caminho para o diretório:
+%\graphicspath{{./figuras/}}
 
 % Customizar as legendas de figuras e tabelas
 \usepackage{caption}
@@ -49,9 +50,9 @@
 % Criar ambientes com 2 ou mais colunas
 \usepackage{multicol}
 
-% Colocar figuras de fundo (e.g., capa)
+% Ative o comando abaixo se quiser colocar figuras de fundo (e.g., capa)
 %\usepackage{wallpaper}
-
+% Exemplo para inserir a figura na capa está no arquivo pre.tex (linha 7)
 % Ajuste da posição da figura no eixo Y
 %\addtolength{\wpYoffset}{-140pt}
 % Ajuste da posição da figura no eixo X
@@ -102,6 +103,7 @@
 \usepackage{natbib}
 
 % Adicionar bibliografia, índice e conteúdo na Tabela de conteúdo
+% Não inclui lista de tabelas e figuras no índice
 \usepackage[nottoc,notlof,notlot]{tocbibind}
 
 %% Pontuação e unidades
@@ -143,11 +145,11 @@
 
 %% Inserir comentários no texto
 % Marcar mudanças e fazer comentários
-\usepackage[margins]{trackchanges}
+%\usepackage[margins]{trackchanges}
 % Iniciais do autor
-\renewcommand{\initialsTwo}{bcv}
+%\renewcommand{\initialsTwo}{bcv}
 % Notas na margem interna
-\reversemarginpar
+%\reversemarginpar
 
 %% Comandos customizados
 

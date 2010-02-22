@@ -32,42 +32,42 @@ Subseção após a subseção com subsubseções via porta \emph{Firewire}.
 
 \subsection{Primeiras figuras}\label{cap2:res:figs}
 
-Subseções de novo, mas coloco algumas figuras para mostrar resultados (Figura~\ref{fig:pronuc}).
+Subseções de novo, mas coloco algumas figuras para mostrar resultados (Figura~\ref{fig:last}). Outro jeito (Figura~\ref{fig:last2}).
 
 % Veja a documentação para mais detalhes de como inserir figuras
 % O texto entre [] na legenda será utilizado na lista de figuras (no preâmbulo), sendo ideal para substituir legendas maiores
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{pronuc}
+  \includegraphics[width=\textwidth]{lastgraph}
   \caption[Figura simples]{Figura abstrata simples com largura igual à largura do texto.}
-  \label{fig:pronuc}
+  \label{fig:last}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\textwidth/2]{pronuc}
+  \includegraphics[width=0.5\textwidth]{lastgraph}
   \caption[Outra figura simples]{Figura abstrata simples com largura igual à metade da largura do texto.}
-  \label{fig:pronuc2}
+  \label{fig:last2}
 \end{figure}
 
-Você também pode inserir múltiplas figuras em uma só, permitindo alinhá-las de forma flexível e consistente (ver Figura~\ref{fig:tufo}).
+Você também pode inserir múltiplas figuras em uma só, permitindo alinhá-las de forma flexível e consistente (ver Figura~\ref{fig:fsm}).
 
 % Note como incluir as sublegendas para cada subfigura (subfloat) e como citá-las na legenda usando o comando subref.
 % Note também como incluir as referências às abreviações (nomenclature) utilizadas para que sejam listadas no preâmbulo.
 \begin{figure}[htbp]
   \centering
-  \subfloat[Subfigura1]{\label{fig:t1}\includegraphics[width=200pt]{tufo}}\vspace{11pt}
-  \subfloat[Subfigura2]{\label{fig:t2}\includegraphics[width=200pt]{tufo}}\\
+  \subfloat[Subfigura1]{\label{fig:t1}\includegraphics[width=200pt]{fsm}}\vspace{11pt}
+  \subfloat[Subfigura2]{\label{fig:t2}\includegraphics[width=200pt]{fsm}}\\
   \vspace{-18pt}
-  \subfloat[Subfigura3]{\label{fig:t3}\includegraphics[width=200pt]{tufo}}\vspace{11pt}
-  \subfloat[Subfigura4]{\label{fig:t4}\includegraphics[width=200pt]{tufo}}%
+  \subfloat[Subfigura3]{\label{fig:t3}\includegraphics[width=200pt]{fsm}}\vspace{11pt}
+  \subfloat[Subfigura4]{\label{fig:t4}\includegraphics[width=200pt]{fsm}}%
   \caption[Figura com subfiguras]{Exemplo de figura com subfiguras. \subref{fig:t1}~Subfigura1 (\textbf{og}) na lâmina. \subref{fig:t2}~Subfigura2 (\textbf{oppv}). \subref{fig:t3}~Subfigura3 aderida (\textbf{opv}). \subref{fig:t4}~Subfigura4. \textbf{sg}, seio genital; \textbf{ln}, lúmen.}%
   \nomenclature{og}{oogônia}%
   \nomenclature{oppv}{oócitos primários pré-vitelogênicos}%
   \nomenclature{opv}{oócitos primários vitelogênicos}%
   \nomenclature{sg}{seio genital}%
   \nomenclature{ln}{lúmen}
-  \label{fig:tufo}
+  \label{fig:fsm}
 \end{figure}
 
 \subsection{Tabelas}\label{cap2:res:tabs}
