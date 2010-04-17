@@ -9,6 +9,17 @@ O modelo novo sugere que cada capítulo tenha um resumo, introdução, materiais
 \subsection{Coleta dos organismos}\label{cap2:mem:coleta}
 
 Você pode dividir cada seção em subseções para organizar melhor o conteúdo.
+Um dos pontos fortes do \LaTeX\ é a praticidade e beleza das fórmulas matemáticas:
+\begin{equation}\label{eq:ind}\notag
+IG=\frac{\text{peso úmido da gônada}}{\text{peso úmido do exemplar - (peso úmido da gônada)}}
+\end{equation}
+
+Outro exemplo de como usar frações no eixo \nicefrac{oral}{aboral}.
+Usamos o programa de processamento de imagens \emph{ImageJ} \citep{Rasband1997} e a linguagem \emph{R} \citep{R2005} para a morfometria ($P<0,050$).
+Os testes estão em fonte \texttt{monoespaçada}, os estágios em \textbf{negrito} e os dados na forma $\text{média} \pm \text{desvio padrão}$.
+
+% A inserção de fórmulas no meio do texto requer o uso de $fórmula$
+A média foi de $2,7\pm\unit[1,1]{g}$ ($n=119$), com amostras entre \unit[0,6]{g} e \unit[7,7]{g} e $P=0,007$.
 
 \subsection{Cultivo dos seres vivos}\label{cap2:mem:gametas}
 
@@ -27,6 +38,56 @@ Apenas \unit[4]{\%} do texto está contido em subsubseções.
 \subsection{Microscopia de luz}\label{cap2:mem:micro}
 
 Subseção após a subseção com subsubseções via porta \emph{Firewire}.
+
+\subsubsection{Fêmeas}\label{cap3:res:femeas}
+
+% Outro ambiente útil é o description, como exemplificado abaixo.
+\begin{description}
+  \item[Estágio1 $(n=27)$:] Descrição minuciosa deste estágio.
+    Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+    Uma boa formatação não distrai o leitor e proporciona maior clareza e prazer durante a leitura.
+  \item[Estágio2 $(n=25)$:] Descrição minuciosa deste estágio.
+    Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+    Uma boa formatação não distrai o leitor e proporciona maior clareza e prazer durante a leitura.
+\end{description}
+
+As descrições também podem ser colocadas uma dentro da outra.
+
+\begin{description}
+  \item[Tipo1:] Descrição minuciosa deste tipo.
+    Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+    A razão $\frac{\text{núcleo}}{\text{citoplasma}}\times100=51,0\pm\unit[11,9]{\%}$.
+  \item[Tipo2:] ~
+    \begin{description}
+      \item[Subtipo2.1:] Descrição minuciosa deste tipo.
+	Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+      \item[Subtipo2.2:] Descrição minuciosa deste tipo.
+	Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+    \end{description}
+  \item[Tipo3:] Descrição minuciosa deste tipo.
+	Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
+\end{description}
+
+\subsubsection{Outra tabela}\label{cap3:res:morf}
+
+Outra tabela de exemplo onde utilizamos o teste \texttt{t} (Tabela~\ref{tab:areap}).
+No caso, o modelo de regressão linear é descrito pela equação $y=0,799x+0,699$.
+
+\begin{table}[htbp]
+  \caption[Tabelas com valores de $P$]{Um exemplo de tabela comum em trabalhos científicos mostrando valores de $P$ em uma comparação estatística, $\alpha=0,05$.}
+  \label{tab:areap}
+  \vspace{1em}
+  \centering
+  \begin{tabular}{l r r r r r}
+    \toprule
+     ~		&	Estágio1	&	Estágio2	&	Estágio3	&	Estágio4\\
+     \midrule
+     Estágio2	&	1,000		&	-		&	-		&	-\\
+     Estágio3	&	0,883		&	1,000		&	-		&	-\\
+     Estágio4	&	\textbf{<0,001}	&	\textbf{<0,001}	&	\textbf{<0,001}	&	-\\
+     \bottomrule
+   \end{tabular}
+ \end{table}
 
 \section{Resultados}\label{cap2:res}
 
