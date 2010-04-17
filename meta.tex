@@ -19,6 +19,10 @@
 %% Layout
 % Customização do layout da página, margens espelhadas
 \usepackage[twoside]{geometry}
+\geometry{bindingoffset=10pt}
+\usepackage{layout}
+\setlength{\marginparwidth}{90pt}
+
 
 % Para definir espaçamento entre as linhas
 \usepackage{setspace}
@@ -119,27 +123,20 @@
 % Usar os estilos do pacote fancyhdr
 \pagestyle{fancy}
 \fancypagestyle{plain}{\fancyhf{}}
-
 % Limpar os campos do cabeçalho atual
 \fancyhead{}
-
 % Número da página do lado esquerdo [L] nas páginas ímpares [O] e do lado direito [R] nas páginas pares [E]
 \fancyhead[LO,RE]{\thepage}
-
 % Nome da seção do lado direito em páginas ímpares
 \fancyhead[RO]{\nouppercase{\rightmark}}
-
 % Nome do capítulo do lado esquerdo em páginas pares
 \fancyhead[LE]{\nouppercase{\leftmark}}
-
 % Limpar os campos do rodapé
 \fancyfoot{}
-
 % Omitir linha de separação entre cabeçalho e conteúdo
 \renewcommand{\headrulewidth}{0pt}
 % Omitir linha de separação entre rodapé e conteúdo
 \renewcommand{\footrulewidth}{0pt}
-
 % Altura do cabeçalho
 \headheight 13.6pt
 
@@ -154,11 +151,11 @@
 %% Comandos customizados
 
 % Espécie e abreviação
-\newcommand{\subde}{\emph{Clypeaster~subdepressus}}
+\newcommand{\subde}{\emph{Clypeaster subdepressus}}
 \newcommand{\subsus}{\emph{C.~subdepressus}}
 
 % Título do projeto
-\newcommand{\tit}{Título original do projeto que normalmente é o que você definiu lá no começo e não pode mais mudar}
+\newcommand{\titulo}{Título original do projeto que normalmente é o que você definiu lá no começo e não pode mais mudar}
 \newcommand{\nomedoaluno}{Nome Completo do Aluno}
 
 %% Pacotes não implementados
