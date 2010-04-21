@@ -1,48 +1,52 @@
 \pagestyle{empty}
 \cleardoublepage
 \pagestyle{fancy}
-\chapter{Um assunto legal}\label{cap2}
+\chapter{Um assunto legal (capítulo 2)}\label{cap2}
 
 \section{Introdução}\label{cap2:intro}
 
-O modelo novo sugere que cada capítulo tenha um resumo, introdução, materiais e métodos, resultados, discussão e conclusões, mas optei por deixar o resumo de fora.
+Se desejar inclua um resumo antes desta introdução usando o modelo do \emph{abstract} que está no arquivo \texttt{pre.tex}.
+Optei por não incluir um resumo por capítulo.
 
 \section{Materiais e Métodos}\label{cap2:mem}
 
-\subsection{Coleta dos organismos}\label{cap2:mem:coleta}
+\subsection{Unidades, frações e fórmulas}\label{cap2:mem:unit}
 
 Você pode dividir cada seção em subseções para organizar melhor o conteúdo.
-Um dos pontos fortes do \LaTeX\ é a praticidade e beleza das fórmulas matemáticas:
+
+% Usando o pacote units
+O pacote \texttt{units} fornece comandos para formatar unidades e frações como \nicefrac{animal}{vegetal} (\nicefrac{A}{V}) e \unitfrac[500]{µm}{s}.
+Ou mesmo \unit[7,5]{h} após a elevação.
+
+Note como formatar a unidade de temperatura e outro exemplo de fração à temperatura constante de \unit[24]{°C}; a concentração final foi de 100~\nicefrac{células}{mL}.
+Ao invés de usar o pacote \texttt{units} (como no começo do parágrafo) você pode usar o comando \texttt{$\backslash$,} para obter o meio espaço entre o número e sua unidade, com 0,6\,g e 7,7\,g.
+
+Um dos pontos fortes do \LaTeX\ é a praticidade e beleza das fórmulas matemáticas\footnote{Não que isso seja uma fórmula matemática de verdade\ldots, mas isto é uma nota de rodapé ;-)}:
 \begin{equation}\label{eq:ind}\notag
 IG=\frac{\text{peso úmido da gônada}}{\text{peso úmido do exemplar - (peso úmido da gônada)}}
 \end{equation}
 
-Outro exemplo de como usar frações no eixo \nicefrac{oral}{aboral}.
-Usamos o programa de processamento de imagens \emph{ImageJ} \citep{Rasband1997} e a linguagem \emph{R} \citep{R2005} para a morfometria ($P<0,050$).
+% A inserção de fórmulas no meio do texto requer o uso de $fórmula$ (cifrões)
+a concentração final foi de $8\times10^5$ e $1\times10^6$ \nicefrac{células}{mL}.
+A cultura foi mantida num ciclo de $12:12$ horas.
+Também é possível inserir fórmulas no meio do texto como $2,7\pm\unit[1,1]{g}$ ($n=119$), com amostras entre \unit[0,6]{g} e \unit[7,7]{g} e $P=0,007$.
+
+
+Citando programa de processamento de imagens \emph{ImageJ} \citep{Rasband1997} e a linguagem \emph{R} \citep{R2005} para a morfometria ($P<0,050$).
 Os testes estão em fonte \texttt{monoespaçada}, os estágios em \textbf{negrito} e os dados na forma $\text{média} \pm \text{desvio padrão}$.
+\subsection{Cultivo das subsubseções}\label{cap2:mem:gametas}
 
-% A inserção de fórmulas no meio do texto requer o uso de $fórmula$
-A média foi de $2,7\pm\unit[1,1]{g}$ ($n=119$), com amostras entre \unit[0,6]{g} e \unit[7,7]{g} e $P=0,007$.
+\subsubsection{Embrião}
 
-\subsection{Cultivo dos seres vivos}\label{cap2:mem:gametas}
+Você também pode criar subsubseções como essa, caso necessário.
 
-\subsubsection{Embriões e Larvas}
+\subsection{Descrições}\label{cap2:mem:micro}
 
-Você também pode criar subsubseções caso necessário.
-% Para inserir fórmulas matemáticas bonitinhas coloque $entre$.
-% Note como formatar a unidade de temperatura e como utilizar o comando \nicefrac para frações.
-A cultura foi mantida num ciclo de $12:12$ horas e temperatura constante de \unit[24]{°C}; a concentração final foi de $8\times10^5$ e $1\times10^6$ \nicefrac{células}{mL}.
-
-\subsubsection{Metamorfose}
-
-% Como o % representa um comentário e não é compilado, para fazê-lo aparecer no texto você precisa colocar uma "\" antes, como abaixo.
-Apenas \unit[4]{\%} do texto está contido em subsubseções.
-
-\subsection{Microscopia de luz}\label{cap2:mem:micro}
-
-Subseção após a subseção com subsubseções via porta \emph{Firewire}.
+Subseção após a subseção com subsubseção.
 
 \subsubsection{Fêmeas}\label{cap3:res:femeas}
+
+Mais uma subsubseção.
 
 % Outro ambiente útil é o description, como exemplificado abaixo.
 \begin{description}
@@ -57,7 +61,7 @@ Subseção após a subseção com subsubseções via porta \emph{Firewire}.
 As descrições também podem ser colocadas uma dentro da outra.
 
 \begin{description}
-  \item[Tipo1:] Descrição minuciosa deste tipo.
+  \item[Tipo1:] Descrição minuciosa.
     Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
     A razão $\frac{\text{núcleo}}{\text{citoplasma}}\times100=51,0\pm\unit[11,9]{\%}$.
   \item[Tipo2:] ~
@@ -71,108 +75,101 @@ As descrições também podem ser colocadas uma dentro da outra.
 	Estou incluindo um pouco de texto extra para mostrar como a formatação fica impecável.
 \end{description}
 
-\subsubsection{Outra tabela}\label{cap3:res:morf}
-
-Outra tabela de exemplo onde utilizamos o teste \texttt{t} (Tabela~\ref{tab:areap}).
-No caso, o modelo de regressão linear é descrito pela equação $y=0,799x+0,699$.
-
-\begin{table}[htbp]
-  \caption[Tabelas com valores de $P$]{Um exemplo de tabela comum em trabalhos científicos mostrando valores de $P$ em uma comparação estatística, $\alpha=0,05$.}
-  \label{tab:areap}
-  \vspace{1em}
-  \centering
-  \begin{tabular}{l r r r r r}
-    \toprule
-     ~		&	Estágio1	&	Estágio2	&	Estágio3	&	Estágio4\\
-     \midrule
-     Estágio2	&	1,000		&	-		&	-		&	-\\
-     Estágio3	&	0,883		&	1,000		&	-		&	-\\
-     Estágio4	&	\textbf{<0,001}	&	\textbf{<0,001}	&	\textbf{<0,001}	&	-\\
-     \bottomrule
-   \end{tabular}
- \end{table}
-
-\section{Resultados}\label{cap2:res}
-
-\subsection{Primeiras figuras}\label{cap2:res:figs}
-
-Subseções de novo, mas coloco algumas figuras para mostrar resultados (Figura~\ref{fig:last}). Outro jeito (Figura~\ref{fig:last2}).
-
-% Veja a documentação para mais detalhes de como inserir figuras
-% O texto entre [] na legenda será utilizado na lista de figuras (no preâmbulo), sendo ideal para substituir legendas maiores
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{lastgraph}
-  \caption[Figura simples]{Figura abstrata simples com largura igual à largura do texto.}
-  \label{fig:last}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.5\textwidth]{lastgraph}
-  \caption[Outra figura simples]{Figura abstrata simples com largura igual à metade da largura do texto.}
-  \label{fig:last2}
-\end{figure}
-
-Você também pode inserir múltiplas figuras em uma só, permitindo alinhá-las de forma flexível e consistente (ver Figura~\ref{fig:fsm}).
-
-% Note como incluir as sublegendas para cada subfigura (subfloat) e como citá-las na legenda usando o comando subref.
-% Note também como incluir as referências às abreviações (nomenclature) utilizadas para que sejam listadas no preâmbulo.
-\begin{figure}[htbp]
-  \centering
-  \subfloat[Subfigura1]{\label{fig:t1}\includegraphics[width=200pt]{fsm}}\vspace{11pt}
-  \subfloat[Subfigura2]{\label{fig:t2}\includegraphics[width=200pt]{fsm}}\\
-  \vspace{-18pt}
-  \subfloat[Subfigura3]{\label{fig:t3}\includegraphics[width=200pt]{fsm}}\vspace{11pt}
-  \subfloat[Subfigura4]{\label{fig:t4}\includegraphics[width=200pt]{fsm}}%
-  \caption[Figura com subfiguras]{Exemplo de figura com subfiguras. \subref{fig:t1}~Subfigura1 (\textbf{og}) na lâmina. \subref{fig:t2}~Subfigura2 (\textbf{oppv}). \subref{fig:t3}~Subfigura3 aderida (\textbf{opv}). \subref{fig:t4}~Subfigura4. \textbf{sg}, seio genital; \textbf{ln}, lúmen.}%
-  \nomenclature{og}{oogônia}%
-  \nomenclature{oppv}{oócitos primários pré-vitelogênicos}%
-  \nomenclature{opv}{oócitos primários vitelogênicos}%
-  \nomenclature{sg}{seio genital}%
-  \nomenclature{ln}{lúmen}
-  \label{fig:fsm}
-\end{figure}
-
-\subsection{Tabelas}\label{cap2:res:tabs}
+\subsubsection{Tabelas}\label{cap3:res:morf}
 
 Utilize tabelas como a Tabela~\ref{tab:exemplo}.
 
 % Para criar tabelas
 \begin{table}[htbp]
-  \caption[Tabela com \texttt{booktabs}]{Exemplo de legenda de tabela criada com o pacote \texttt{booktabs}.}
-  \label{tab:exemplo}
-  \vspace{1em}
-  \centering
-  \begin{tabular}{l r@{\,} l}
-    \toprule
-    Eventos     &   \multicolumn{2}{c}{Tempo}\\
-    \midrule
-    Entrada     &   0   &       \\
-    Elevação    &   40  &   s   \\
-    Corrida     &   6   &   min \\
-    Saída	&   15  &   min \\
-    \bottomrule
-  \end{tabular}
+    \caption[Tabela com \texttt{booktabs}]{Exemplo de legenda de tabela criada com o pacote \texttt{booktabs}.}
+    \label{tab:exemplo}
+    \vspace{1em}
+    \centering
+    \begin{tabular}{l r@{\,} l}
+        \toprule
+        Eventos     & \multicolumn{2}{c}{Tempo}\\
+        \midrule
+        Entrada     & 0   & \\
+        Elevação    & 40  & s   \\
+        Corrida     & 6   & min \\
+        Saída       & 15  & min \\
+        \bottomrule
+    \end{tabular}
 \end{table}
 
-% Usando o pacote units
-Ocorrem no eixo \nicefrac{animal}{vegetal} (\nicefrac{A}{V}) e dividem à \unitfrac[500]{µm}{s}.
-Por volta de \unit[7,5]{h} após a elevação.
+Outra tabela de exemplo onde utilizamos o teste \texttt{t} (Tabela~\ref{tab:areap}).
+No caso, o modelo de regressão linear é descrito pela equação $y=0,799x+0,699$.
+
+\begin{table}[htbp]
+    \caption[Tabelas com valores de $P$]{Um exemplo de tabela comum em trabalhos científicos mostrando valores de $P$ em uma comparação estatística, $\alpha=0,05$.}
+    \label{tab:areap}
+    \vspace{1em}
+    \centering
+    \begin{tabular}{l r r r r r}
+        \toprule
+        ~	        & Estágio1          & Estágio2      & Estágio3	        & Estágio4\\
+        \midrule
+        Estágio2	& 1,000		    & -		    & -		        & -\\
+        Estágio3	& 0,883		    & 1,000	    & -		        & -\\
+        Estágio4	& \textbf{<0,001}   &\textbf{<0,001}& \textbf{<0,001}   & -\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Resultados}\label{cap2:res}
+
+\subsection{Figuras simples}\label{cap2:res:figs}
+
+Subseção de novo, mas coloco algumas figuras para mostrar resultados (Figura~\ref{fig:last}).
+Também é possível definir o tamanho da figura relativamente (e.g., metade da largura do texto; Figura~\ref{fig:last2}).
+
+% Veja a documentação para mais detalhes de como inserir figuras
+% O texto entre [] na legenda será utilizado na lista de figuras (no preâmbulo), sendo ideal para substituir legendas maiores
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{lastgraph}
+    \caption[Figura simples]{Figura abstrata simples com largura igual à largura do texto.}
+    \label{fig:last}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{lastgraph}
+    \caption[Outra figura simples]{Figura abstrata simples com largura igual à metade da largura do texto.}
+    \label{fig:last2}
+\end{figure}
+
+\subsection{Figuras compostas e abreviações}\label{cap2:res:figs2}
+
+Você também pode inserir múltiplas figuras em uma só, permitindo alinhá-las de forma flexível e consistente (ver Figura~\ref{fig:fsm}).
+
 % Usando o pacote nomencl
-Após \unit[10]{h}, as células mesenquimais primárias (CMP) iniciam sua ingressão.%
+% Detalhe importante, leia as instruções no site para fazer a lista de abreviações aparecer.
+% http://code.google.com/p/mestre-em-latex/wiki/ListaDeAbreviaturas
+Para selecionar abreviações que serão incluídas na lista no começo do documento veja o arquivo \texttt{cap2.tex}; como a seguir as células mesenquimais primárias (CMP) iniciam sua ingressão.%
 \nomenclature{CMP}{células mesenquimais primárias}
-% Colocando aspas e exemplo do pacote natbib
-Larvas apresentam comportamento de ``teste de substrato''.
+
+% Note como incluir as sublegendas para cada subfigura (subfloat) e como citá-las na legenda usando o comando subref.
+% Note também como incluir as referências às abreviações (nomenclature) utilizadas para que sejam listadas no preâmbulo.
+\begin{figure}[htbp]
+    \centering
+    \subfloat[Subfigura1]{\label{fig:t1}\includegraphics[width=200pt]{fsm}}\vspace{11pt}
+    \subfloat[Subfigura2]{\label{fig:t2}\includegraphics[width=200pt]{fsm}}\\
+    \vspace{-18pt}
+    \subfloat[Subfigura3]{\label{fig:t3}\includegraphics[width=200pt]{fsm}}\vspace{11pt}
+    \subfloat[Subfigura4]{\label{fig:t4}\includegraphics[width=200pt]{fsm}}%
+    \caption[Figura com subfiguras]{Exemplo de figura com subfiguras. \subref{fig:t1}~Subfigura1 (\textbf{og}) na lâmina. \subref{fig:t2}~Subfigura2 (\textbf{oppv}). \subref{fig:t3}~Subfigura3 aderida (\textbf{opv}). \subref{fig:t4}~Subfigura4. \textbf{sg}, seio genital; \textbf{ln}, lúmen.}%
+    \nomenclature{og}{oogônia}%
+    \nomenclature{oppv}{oócitos primários pré-vitelogênicos}%
+    \nomenclature{opv}{oócitos primários vitelogênicos}%
+    \nomenclature{sg}{seio genital}%
+    \nomenclature{ln}{lúmen}
+    \label{fig:fsm}
+\end{figure}
 
 \section{Discussão}\label{cap2:disc}
 
-% Comandos como o utilizado para incluir o nome da espécie estudada (subdeshort) devem ser seguidos de uma \ para inserir um espaço antes da próxima palavra. Esta \ não precisa ser utilizada quando o comando é seguido de ponto ou vírgula.
-\citet{Day2006} não usaram papilas de \subsus.
-% O pacote icomma permite usar a vírgula como separador decimal, já que o comportamento padrão do LaTeX é inserir um espaço maior após uma vírgula.
-A migração foi similar à \subsus\ (\unitfrac[0,082]{µm}{s}).
-Outro comando útil é a criação de notas de rodapé\footnote{A temperatura não foi precisada; embriões fecundados entre 25 e \unit[28]{°C}.}.
-A evolução deste caráter pode ser vista de duas formas.
+A evolução deste caráter pode ser vista de duas formas:
 
 % Este é um dos modos de iniciar uma lista ordenada.
 % Note que é possível inserir listas dentro de listas.
@@ -189,5 +186,3 @@ A evolução deste caráter pode ser vista de duas formas.
 \end{enumerate}
 
 Você pode citar ítens assinalados, como a hipótese \ref{hipo:1} e a alternativa \ref{hipo:2}.
-
-%\clearpage{\pagestyle{empty}\cleardoublepage}

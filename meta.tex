@@ -19,10 +19,11 @@
 %% Layout
 % Customização do layout da página, margens espelhadas
 \usepackage[twoside]{geometry}
+% Aumenta as margens internas para espiral
 \geometry{bindingoffset=10pt}
-\usepackage{layout}
+% Só pra ajustar o layout
 \setlength{\marginparwidth}{90pt}
-
+%\usepackage{layout}
 
 % Para definir espaçamento entre as linhas
 \usepackage{setspace}
@@ -155,24 +156,10 @@
 \newcommand{\subsus}{\emph{C.~subdepressus}}
 
 % Título do projeto
-\newcommand{\titulo}{Título original do projeto que normalmente é o que você definiu lá no começo e não pode mais mudar}
+\newcommand{\titulo}{Título original do projeto}
 \newcommand{\nomedoaluno}{Nome Completo do Aluno}
 
 %% Pacotes não implementados
 % Para não sobrar espaços em branco estranhos
 %\widowpenalty=1000
 %\clubpenalty=1000
-%\newcommand{\gepeto}[1]{\vspace*{12pt}\begin{singlespace}\hspace{2cm}\begin{small}\parbox{12cm}{#1}\end{small}\end{singlespace}\vspace*{20pt}}
-
-% Novo ambiente
-%\newenvironment{gepeto}[1]
-%{\vspace{1em}\begin{singlespace}\noindent\ignorespaces\hspace*{1cm}\parbox{3cm}{#1}}
-%{\vspace{1em}\end{singlespace}}
-
-%\usepackage[fixlanguage]{babelbib}		% Escrever referências em outras línguas que não inglês
-%\usepackage{abntcite}				% Formatação de citações e referências segundo a ABNT
-%\usepackage{xindy}				% Índice remissivo
-%\usepackage{biocon}				% Para lidar com nomes de espécies [não implementado]
-%\newanimal{Cs}{genus=Clypeaster,epithet=subdepressus,author=Gray,year=1825}
-%\newcommand{\subde}{\animal[e]{Cs}}		% Comando para escrever a espécie por extenso [não implementado]
-%\newcommand{\subdeshort}{\animal[a]{Cs}}	% Comando para escrever a espécie abreviada [não implementado]
