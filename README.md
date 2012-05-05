@@ -1,24 +1,20 @@
 O **Mestre em LaTeX** tem como objetivo facilitar a vida de quem está prestes a escrever sua dissertação de mestrado ou tese de doutorado em português. Ele é um modelo de dissertação que contém informações básicas para iniciantes em LaTeX, além de incluir uma série de pacotes úteis para escrever sua dissertação/tese eficientemente na língua portuguesa.
 
-O modelo foi baseado no padrão do Instituto de Biociências da Universidade de São Paulo, que pode ser visto na página de [pós-graduação](http://www.ib.usp.br/pos/formaq.htm).
+**Website:** http://nelas.github.com/mestre-em-latex/
 
-Uma série de funcionalidades nativas do LaTeX já estão configuradas para usar, entre elas:
+## Comece a usar
 
-- Hifenação em português
-- Definir espaçamento entre linhas
-- Inclusão de figuras em vários formatos (output em PDF)
-- Criar figuras com subfiguras
-- Criar tabelas com qualidade de publicação
-- Criar links dinâmicos clicáveis e configuráveis para capítulos, seções, figuras e referências
-- Contar número de páginas
-- Customização dos cabeçalhos e rodapés 
+**Download:** se ainda não baixou, pegue o arquivo [ZIP](https://github.com/nelas/mestre-em-latex/zipball/master) ou [TGZ](https://github.com/nelas/mestre-em-latex/tarball/master)
 
-Funções úteis para uma dissertação/tese, derivadas de pacotes extras, também estão incluídas e configuradas:
+**Instruções:** acesse o [wiki do MeL](https://github.com/nelas/mestre-em-latex/wiki)
 
-- Caracteres especiais mapeados no PDF (torna-os 100% buscáveis)
-- Formatar as citações de forma flexível no texto
-- Usar a vírgula como separador decimal
-- Colocar figuras de fundo (e.g., para capa e afins)
-- Formatar unidades de forma consistente
-- Criar lista de abreviações
-- Marcar mudanças e fazer comentários 
+## Links Relevantes
+
+Não sabe o que é LaTeX, mas achou interessante? Aqui estão alguns links úteis para começar e continuar aprendendo sobre LaTeX:
+
+* [Wikipedia](http://pt.wikipedia.org/wiki/LaTeX) ([en](http://en.wikipedia.org/wiki/LaTeX)) - Descrição informativa com alguns exemplos.
+* [LaTeX Project](http://www.latex-project.org/) - Site do projeto com documentação.
+* [TUG](http://www.tug.org/) - Grupo de usuários com muitas informações úteis.
+* [CTAN](http://www.ctan.org/) - Arquivo com infinidade de pacotes feitos por usuários.
+* [Wikibooks](http://en.wikibooks.org/wiki/LaTeX/) - Excelente página para aprender os básicos.
+* [TeX-BR](http://www.tex-br.org/) - Wiki sobre LaTeX em português.
