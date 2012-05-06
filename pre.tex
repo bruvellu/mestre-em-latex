@@ -12,7 +12,7 @@
 \par
 \vfill
 \textbf{{\large São Paulo}\\
-{\large 2009}}
+{\large \the\year}}
 \end{center}
 \end{titlepage}
 
@@ -43,7 +43,7 @@
 \vfill
 \begin{center}
 \textbf{{\large São Paulo}\\
-{\large 2009}}
+{\large \the\year}}
 \end{center}
 
 \newpage
@@ -186,6 +186,9 @@ A good abstract explains why this is an interesting study, tells how it was done
 
 \newpage
 
+% Desabilitar protrusão para listas e índice
+\microtypesetup{protrusion=false}
+
 % Lista de figuras
 \listoffigures
 
@@ -199,3 +202,6 @@ A good abstract explains why this is an interesting study, tells how it was done
 
 % Índice
 \tableofcontents
+
+% Re-habilita protrusão novamente
+\microtypesetup{protrusion=true}
