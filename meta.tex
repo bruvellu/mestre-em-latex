@@ -111,18 +111,6 @@
 % Notas criadas nas tabelas ficam no fim das tabelas
 \makesavenoteenv{tabular}
 
-%% Links dinâmicos
-% Suporte para hipertexto, links para referências e figuras
-\usepackage{hyperref}
-% Configurações dos links e metatags do PDF a ser gerado
-\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, pagecolor=blue, urlcolor=green,
-            pdfauthor={Nome do Autor},
-            pdftitle={Título do Projeto},
-            pdfsubject={Assunto do Projeto},
-            pdfkeywords={palavra-chave, palavra-chave, palavra-chave},
-            pdfproducer={Latex},
-            pdfcreator={pdflatex}}
-
 % Conta o número de páginas
 \usepackage{lastpage}
 
@@ -164,6 +152,22 @@
 % Altura do cabeçalho
 \headheight 13.6pt
 
+% Dados do projeto
+\newcommand{\nomedoaluno}{Nome Completo do Aluno}
+\newcommand{\titulo}{Título original do projeto}
+
+%% Links dinâmicos
+% Suporte para hipertexto, links para referências e figuras
+\usepackage{hyperref}
+% Configurações dos links e metatags do PDF a ser gerado
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, pagecolor=blue, urlcolor=green,
+            pdfauthor={\nomedoaluno},
+            pdftitle={\titulo},
+            pdfsubject={Assunto do Projeto},
+            pdfkeywords={palavra-chave, palavra-chave, palavra-chave},
+            pdfproducer={LaTeX},
+            pdfcreator={pdfTeX}}
+
 %% Inserir comentários no texto
 % Marcar mudanças e fazer comentários
 %\usepackage[margins]{trackchanges}
@@ -177,10 +181,6 @@
 % Espécie e abreviação
 \newcommand{\subde}{\emph{Clypeaster subdepressus}}
 \newcommand{\subsus}{\emph{C.~subdepressus}}
-
-% Título do projeto
-\newcommand{\titulo}{Título original do projeto}
-\newcommand{\nomedoaluno}{Nome Completo do Aluno}
 
 %% Pacotes não implementados
 % Para não sobrar espaços em branco estranhos
