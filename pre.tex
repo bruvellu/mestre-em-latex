@@ -1,5 +1,10 @@
-% Capa
+% Limpa cabeçalhos.
+% (solução para lidar com a númeração das páginas pré-textuais).
+\pagestyle{empty}
+
+%% Capa
 \begin{titlepage}
+
 % Se quiser uma figura de fundo na capa ative o pacote wallpaper
 % e descomente a linha abaixo.
 % \ThisCenterWallPaper{0.8}{nomedafigura}
@@ -16,15 +21,21 @@
 \end{center}
 \end{titlepage}
 
-% A partir daqui páginas sem cabeçalho
-\pagestyle{empty}
 % Faz com que a página seguinte sempre seja ímpar (insere pg em branco)
 \cleardoublepage
+
+% Numeração em elementos pré-textuais é opcional (ativada por padrão).
+% Para desativá-la comente a linha abaixo.
+\pagestyle{fancy}
 
 % Números das páginas em algarismos romanos
 \pagenumbering{roman}
 
-% Página de Rosto
+%% Página de Rosto
+
+% Numeração não deve aparecer na página de rosto.
+\thispagestyle{empty}
+
 \begin{center}
 {\LARGE \nomedoaluno}
 \par
