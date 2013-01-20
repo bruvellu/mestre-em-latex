@@ -18,4 +18,4 @@ Não sabe o que é LaTeX, mas achou interessante? Aqui estão alguns links útei
 * [CTAN](http://www.ctan.org/) - Arquivo com infinidade de pacotes feitos por usuários.
 * [Wikibooks](http://en.wikibooks.org/wiki/LaTeX/) - Excelente página para aprender os básicos.
 * [TeX-BR](http://www.tex-br.org/) - Wiki sobre LaTeX em português.
-* [abnTeX2](https://code.google.com/p/abntex2/) - Classe e pacotes que atendem as normas da ABNT.
+* [abnTeX2](https://code.google.com/p/abntex2/) - Classe e pacotes que atendem às normas da ABNT.
